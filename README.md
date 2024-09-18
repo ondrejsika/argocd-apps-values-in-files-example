@@ -1,1 +1,1 @@
-# argocd-apps-test-values-in-files
+# argocd-apps-values-in-files-example
