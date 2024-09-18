@@ -12,24 +12,10 @@ spec:
   project: default
   source:
     path: ./apps
-    repoURL: https://gitlab.sikalabs.com/ondrejsika-random/2024-09-18_argocd-apps-test-values-in-files.git
+    repoURL: https://github.com/ondrejsika/argocd-apps-values-in-files-example.git
     directory:
       recurse: true
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
----
-apiVersion: v1
-kind: Secret
-metadata:
-  name: repo
-  namespace: argocd
-  labels:
-    argocd.argoproj.io/secret-type: repository
-stringData:
-  project: default
-  type: git
-  url: https://gitlab.sikalabs.com/ondrejsika-random/2024-09-18_argocd-apps-test-values-in-files.git
-  username: token
-  password: glpat-xeU_ksCKbeXSSzzsz6Ny
